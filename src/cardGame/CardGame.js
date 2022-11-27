@@ -67,7 +67,7 @@ export default function CardGame() {
     oldClick.current = null;
   }
   return (
-    <div className="App">
+    <>
       <div className="grid">
         {grid.map((row, rowIndex) => (
           <div key={rowIndex} className="row">
@@ -94,7 +94,12 @@ export default function CardGame() {
             ))}
           </div>
         ))}
+        {isPaused.current && (
+          <div className="wrong-answer" style={{ margin: 0 }}>
+            <b>Wrong guess!</b>
+          </div>
+        )}
       </div>
-    </div>
+    </>
   );
 }
