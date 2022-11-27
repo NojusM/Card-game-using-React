@@ -1,0 +1,42 @@
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: black;
+    font-size: 80px;
+    padding: 10px;
+    color: transparent;
+    border-image: linear-gradient(black, blue, black, blue) 10;
+    border-width: 4px;
+    border-style: solid;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+  }
+  
+  .card:hover{
+    background-color: rgb(43, 42, 42);
+  }
+  
+  .card.open {
+    color: white;
+  }
+  
+  .card.open:hover{
+    background-color: black;
+    cursor: auto;
+  }
+  
+  .card.open.matched {
+    color: green;
+  }
